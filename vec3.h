@@ -14,7 +14,7 @@ class Vec3 {
     x = _x;
     y = _y;
     z = _z;
-  };
+  }
   double length() const { return std::sqrt(x * x + y * y + z * z); };
   double length2() const { return x * x + y * y + z * z; };
 
