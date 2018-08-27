@@ -16,7 +16,9 @@ class Image {
   };
 
   ~Image() { delete[] data; };
-  Vec3 getPixel(int i, int j) const { return data[width * i + j]; };
+  Vec3 getPixel(int i, int j) const {
+    return data[width * i + j];
+  };  // classのメンバ変数にすでに設定されているので、引数に含む必要なし
   Vec3 setPixel(int i, int j, const Vec3& color) {
     return data[width * i + j] = color;
   };
