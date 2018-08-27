@@ -15,8 +15,9 @@ class Camera {
       : camPos(camPos), camForward(camForward) {
     camRight =
         -1 * normalize(cross(camForward, Vec3(0, 1, 0)));  //横 上下　奥行き
-    camUp = normalize(cross(
-        camForward, camRight));  //左手　フレミング　1 => 親指 2 => 人差し指
+    camUp = normalize(
+        cross(camForward, camRight));  //左手　フレミング　1 => 親指, 2 =>
+                                       //人差し指,外積の向き -> 中指
   };
   Ray getRay(double u, double v) const {
     Vec3 pinhole = camPos + camForward;
