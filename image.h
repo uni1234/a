@@ -11,9 +11,7 @@ class Image {
   int height;
   Vec3* data;
 
-  Image(int _width, int _height) {
-    width = _width;
-    height = _height;
+  Image(int width, int height) : width(width), height(height) {
     data = new Vec3[width * height];
   };
 
