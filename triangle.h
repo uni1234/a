@@ -23,19 +23,10 @@ class Triangle {
     double s = det3(p, b, d) / k;
     double t = det3(a, p, d) / k;
     double l = det3(a, b, p) / k;
-    if (s + t > 1 || s + t < 0) {
-      return false;
-    } else {
-      if (s > 1 || s < 0) {
-        return false;
-      } else {
-        if (t > 1 || t < 0) {
-          return false;
-        } else {
-          return true;
-        }
-      }
-    }
+    if (s + t > 1 || s + t < 0) return false;
+    if (s < 0 || s > 1) return false;
+    if (t < 0 || t > 1) return false;
+    return true;
   };
 };
 #endif
