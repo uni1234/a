@@ -50,4 +50,9 @@ Vec3 cross(const Vec3& v1, const Vec3& v2) {
 }
 Vec3 normalize(const Vec3& v) { return v / v.length(); }
 
+double det3(const Vec3& v1, const Vec3& v2, const Vec3& v3) {
+  return v1.x * v2.y * v3.z + v1.y * v2.z * v3.x + v1.z * v2.x * v3.y -
+         v3.x * v2.y * v1.z - v3.y * v2.z * v1.x - v3.z * v2.x * v1.y;
+}
+
 #endif
