@@ -55,4 +55,7 @@ double det3(const Vec3& v1, const Vec3& v2, const Vec3& v3) {
          v3.x * v2.y * v1.z - v3.y * v2.z * v1.x - v3.z * v2.x * v1.y;
 }
 
+Vec3 reflect(const Vec3& d, const Vec3& n) {  //反射
+  return d - 2 * dot(d, n) * n;
+}
 #endif
