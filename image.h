@@ -31,6 +31,9 @@ class Image {
     for (int i = 0; i < width; i++) {
       for (int j = 0; j < height; j++) {
         Vec3 color = 255 * this->getPixel(i, j);
+        if (color.x < 0) color.x = -color.x;  //書き方めんどい？かえたい
+        if (color.y < 0) color.y = -color.y;
+        if (color.z < 0) color.z = -color.z;
         int r = std::min((int)color.x, 255);
         int g = std::min((int)color.y, 255);
         int b = std::min((int)color.z, 255);
